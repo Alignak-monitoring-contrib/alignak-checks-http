@@ -1,7 +1,16 @@
-Alignak checks package for HTTP/HTTPS
-=====================================
+Alignak checks package for the monitoring plugins
+=================================================
 
-Checks pack for checking HTTP/HTTPS Web services
+Checks pack for checking a lot of services: Dns, Http, Dhcp, ...
+
+This checks pack is based upon the checks of the `Monitoring Plugins Project<https://www.monitoring-plugins.org/doc/faq/installation.html>`_.
+
+This project is a bundle of around 50 standard plugins for monitoring applications.
+Some plugins allow to monitor local system metrics, others use various network protocols for remote checks.
+
+*Our bundle was previously known as the “official” Nagios Plugins package.*
+*The new name reflects both the success of the straightforward plugin interface originally invented*
+*by the Nagios folks, and the popularity of our package, as the plugins are now used with various other monitoring products as well.*
 
 
 Installation
@@ -11,15 +20,15 @@ From PyPI
 ~~~~~~~~~
 To install the package from PyPI:
 ::
-   pip install alignak-checks-http
+   pip install alignak-checks-monitoring
 
 
 From source files
 ~~~~~~~~~~~~~~~~~
 To install the package from the source files:
 ::
-   git clone https://github.com/Alignak-monitoring-contrib/alignak-checks-http
-   cd alignak-checks-http
+   git clone https://github.com/Alignak-monitoring-contrib/alignak-checks-monitoring
+   cd alignak-checks-monitoring
    sudo python setup.py install
 
 
@@ -29,7 +38,7 @@ Documentation
 Configuration
 ~~~~~~~~~~~~~
 
-To use this checks package, you must install some external plugins.
+To use this checks package, you must first install some external plugins.
 We recommand that you download and install the Monitoring plugins: https://www.monitoring-plugins.org/download.html
 
 Check if it exists a binary package for your OS distribution rather than compiling and installing from source.
