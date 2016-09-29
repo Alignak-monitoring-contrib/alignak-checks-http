@@ -57,6 +57,16 @@ An abstract::
 
 After compilation and installation, the plugins are installed in the */usr/local/libexec* directory.
 
+The */usr/local/etc/alignak/arbiter/packs/resource.d/monitoring.cfg* file defines a global macro
+that contains the monitoring plugins installation path. If you do not install as default, edit
+this file to update the path
+::
+
+    #-- Monitoring plugins installation directory
+    $MONITORING_PLUGINS_DIR$=/usr/local/libexec
+    #--
+
+
 Alignak configuration
 ~~~~~~~~~~~~~~~~~~~~~
 
