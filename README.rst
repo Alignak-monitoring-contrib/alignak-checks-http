@@ -45,8 +45,9 @@ Check if it exists a binary package for your OS distribution rather than compili
 Else, the source installation procedure is explained `here<https://www.monitoring-plugins.org/doc/faq/installation.html>`_.
 An abstract::
 
-    $ gzip -dc monitoring-plugins-2.x.tar.gz | tar -xf -
-    $ cd monitoring-plugins-2.x
+    $ wget https://www.monitoring-plugins.org/download/monitoring-plugins-2.X.tar.gz
+    $ gzip -dc monitoring-plugins-2.X.tar.gz | tar -xf -
+    $ cd monitoring-plugins-2.X
     $ ./configure
     $ make
 
@@ -66,7 +67,7 @@ this file to update the path
     $MONITORING_PLUGINS_DIR$=/usr/local/libexec
     #--
 
-
+Many information is available on the `project github repository<https://github.com/monitoring-plugins/monitoring-plugins>`_, espacially in the REQUIREMENTS file.
 Alignak configuration
 ~~~~~~~~~~~~~~~~~~~~~
 
