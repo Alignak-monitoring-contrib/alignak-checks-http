@@ -3,7 +3,9 @@ Alignak checks package for the monitoring plugins
 
 Checks pack for checking a lot of services: Dns, Http, Dhcp, ...
 
-This checks pack is based upon the checks of the `Monitoring Plugins Project<https://www.monitoring-plugins.org/doc/faq/installation.html>`_.
+This checks pack is based upon the checks of the `Monitoring Plugins Project`_.
+
+.. _Monitoring plugins project: https://www.monitoring-plugins.org
 
 This project is a bundle of around 50 standard plugins for monitoring applications.
 Some plugins allow to monitor local system metrics, others use various network protocols for remote checks.
@@ -39,10 +41,15 @@ Configuration
 ~~~~~~~~~~~~~
 
 To use this checks package, you must first install some external plugins.
-We recommand that you download and install the Monitoring plugins: https://www.monitoring-plugins.org/download.html
+We recommend that you download and install the `Monitoring plugins`_.
+
+.. _Monitoring plugins: https://www.monitoring-plugins.org/download.html
 
 Check if it exists a binary package for your OS distribution rather than compiling and installing from source.
-Else, the source installation procedure is explained `here<https://www.monitoring-plugins.org/doc/faq/installation.html>`_.
+Else, the source installation procedure is explained `here`_.
+
+.. _here: https://www.monitoring-plugins.org/doc/faq/installation.html
+
 An abstract::
 
     $ wget https://www.monitoring-plugins.org/download/monitoring-plugins-2.X.tar.gz
@@ -67,7 +74,11 @@ this file to update the path
     $MONITORING_PLUGINS_DIR$=/usr/local/libexec
     #--
 
-Many information is available on the `project github repository<https://github.com/monitoring-plugins/monitoring-plugins>`_, espacially in the REQUIREMENTS file.
+Many information is available on the `project github repository`_, espacially in the REQUIREMENTS file.
+
+.. _project github repository: https://github.com/monitoring-plugins/monitoring-plugins
+
+
 Alignak configuration
 ~~~~~~~~~~~~~~~~~~~~~
 
