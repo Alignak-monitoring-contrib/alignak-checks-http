@@ -3,18 +3,6 @@ Alignak checks package for the monitoring plugins
 
 *Checks pack for checking a lot of services: Dns, Http, Dhcp, ...*
 
-This checks pack is based upon the checks of the `Monitoring Plugins Project`_.
-
-.. _Monitoring plugins project: https://www.monitoring-plugins.org
-
-This project is a bundle of around 50 standard plugins for monitoring applications.
-Some plugins allow to monitor local system metrics, others use various network protocols for remote checks.
-
-*Our bundle was previously known as the “official” Nagios Plugins package.*
-*The new name reflects both the success of the straightforward plugin interface originally invented*
-*by the Nagios folks, and the popularity of our package, as the plugins are now used with various other monitoring products as well.*
-
-
 .. image:: https://img.shields.io/badge/IRC-%23alignak-1e72ff.svg?style=flat
     :target: http://webchat.freenode.net/?channels=%23alignak
     :alt: Join the chat #alignak on freenode.net
@@ -22,6 +10,14 @@ Some plugins allow to monitor local system metrics, others use various network p
 .. image:: https://img.shields.io/badge/License-AGPL%20v3-blue.svg
     :target: http://www.gnu.org/licenses/agpl-3.0
     :alt: License AGPL v3
+
+This checks pack is based upon the check plugins of the `Monitoring Plugins Project <https://www.monitoring-plugins.org>`_.
+
+This project is a bundle of around 50 standard plugins for monitoring applications. Some plugins allow to monitor local system metrics, others use various network protocols for remote checks.
+
+*Our bundle was previously known as the “official” Nagios Plugins package.*
+*The new name reflects both the success of the straightforward plugin interface originally invented*
+*by the Nagios folks, and the popularity of our package, as the plugins are now used with various other monitoring products as well.*
 
 
 Installation
