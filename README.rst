@@ -55,7 +55,7 @@ An abstract::
     $ wget https://www.monitoring-plugins.org/download/monitoring-plugins-2.X.tar.gz
     $ gzip -dc monitoring-plugins-2.X.tar.gz | tar -xf -
     $ cd monitoring-plugins-2.X
-    $ ./configure
+    $ ./configure --prefix /usr/local/libexec/monitoring-plugins
     $ make
 
     $ make install
@@ -71,7 +71,7 @@ this file to update the path
 ::
 
     #-- Monitoring plugins installation directory
-    $MONITORING_PLUGINS_DIR$=/usr/local/libexec
+    $MONITORING_PLUGINS_DIR$=/usr/local/libexec/monitoring-plugins/libexec
     #--
 
 Many information is available on the `project github repository`_, espacially in the REQUIREMENTS file.
