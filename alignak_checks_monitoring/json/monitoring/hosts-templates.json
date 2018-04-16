@@ -1,6 +1,7 @@
 [
     {
         "_is_template": true,
+        "alias": "Host with DNS",
         "customs": {
             "_DNSHOSTNAME": "$HOSTNAME$",
             "_DNSEXPECTEDRESULT": "$HOSTADDRESS$"
@@ -12,6 +13,7 @@
     },
     {
         "_is_template": true,
+        "alias": "Host with SSH",
         "customs": {
             "_SSHPORT": "22"
         },
@@ -22,6 +24,7 @@
     },
     {
         "_is_template": true,
+        "alias": "Host with FTP",
         "name": "ftp-host",
         "tags": [
             "FTP"
@@ -29,6 +32,7 @@
     },
     {
         "_is_template": true,
+        "alias": "Host with HTTP",
         "customs": {
             "_CHECK_HTTP_DOMAIN_NAME": "$HOSTADDRESS$",
             "_CHECK_HTTP_PORT": "80",
@@ -42,6 +46,7 @@
     },
     {
         "_is_template": true,
+        "alias": "Host with HTTPS",
         "customs": {
             "_CHECK_HTTPS_DOMAIN_NAME": "$HOSTNAME$",
             "_CHECK_HTTPS_ADDRESS": "$HOSTADDRESS$",

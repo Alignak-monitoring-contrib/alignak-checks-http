@@ -1,7 +1,6 @@
 [
     {
         "_is_template": true,
-        "alias": "Dns",
         "check_command": "check_dns",
         "check_command_args": "",
         "host": "dns-host",
@@ -9,15 +8,13 @@
     },
     {
         "_is_template": true,
-        "alias": "Ssh",
         "check_command": "check_ssh",
         "check_command_args": "",
         "host": "ssh-host",
-        "name": "SSH"
+        "name": "Ssh"
     },
     {
         "_is_template": true,
-        "alias": "Ftp",
         "check_command": "check_ftp",
         "check_command_args": "",
         "host": "ftp-host",
@@ -25,18 +22,38 @@
     },
     {
         "_is_template": true,
-        "alias": "Http",
         "check_command": "check_http",
         "check_command_args": "",
         "host": "http-host",
-        "name": "HTTP"
+        "name": "Host Http"
     },
     {
         "_is_template": true,
-        "alias": "Https",
         "check_command": "check_https",
         "check_command_args": "",
         "host": "https-host",
-        "name": "HTTPS"
+        "name": "Host Https"
+    },
+    {
+        "_is_template": true,
+        "check_command": "check_http",
+        "check_command_args": "",
+        "customs": {
+            "_CHECK_HTTP_PORT": "80",
+            "_CHECK_HTTP_URI": "/"
+        },
+        "host": "_dummy",
+        "name": "Http"
+    },
+    {
+        "_is_template": true,
+        "check_command": "check_https",
+        "check_command_args": "",
+        "customs": {
+            "_CHECK_HTTP_PORT": "443",
+            "_CHECK_HTTP_URI": "/"
+        },
+        "host": "_dummy",
+        "name": "Https"
     }
 ]
