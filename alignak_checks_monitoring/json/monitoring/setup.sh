@@ -79,20 +79,6 @@ if [ $? -ne 0 ]; then
     ERROR_FOUND=$((ERROR_FOUND + 1))
 fi
 
-echo "alignak-backend-cli $ARGUMENTS -f "$JSON_FILES" -t hostgroup -d hostgroups.json add"
-alignak-backend-cli $ARGUMENTS -f "$JSON_FILES" -t hostgroup -d hostgroups.json add
-if [ $? -ne 0 ]; then
-    echo "Failed to import file :("
-    ERROR_FOUND=$((ERROR_FOUND + 1))
-fi
-
-echo "alignak-backend-cli $ARGUMENTS -f "$JSON_FILES" -t servicegroup -d servicegroups.json add"
-alignak-backend-cli $ARGUMENTS -f "$JSON_FILES" -t servicegroup -d servicegroups.json add
-if [ $? -ne 0 ]; then
-    echo "Failed to import file :("
-    ERROR_FOUND=$((ERROR_FOUND + 1))
-fi
-
 echo "alignak-backend-cli $ARGUMENTS -f "$JSON_FILES" -t host -d hosts-templates.json add"
 alignak-backend-cli $ARGUMENTS -f "$JSON_FILES" -t host -d hosts-templates.json add
 if [ $? -ne 0 ]; then
