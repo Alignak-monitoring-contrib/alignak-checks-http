@@ -18,7 +18,7 @@ __pkg_name__ = u"alignak_checks_monitoring"
 __checks_type__ = u"monitoring"
 
 # Application manifest
-__version__ = u"1.1.2"
+__version__ = u"1.1.3"
 __author__ = u"Frédéric Mohier"
 __author_email__ = u"frederic.mohier@alignak.net"
 __copyright__ = u"(c) 2015-2017 - %s" % __author__

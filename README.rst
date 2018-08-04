@@ -74,17 +74,16 @@ An abstract::
     $ ./configure --prefix /usr/local/libexec/monitoring-plugins
     $ make
 
-    $ make install
+    $ sudo make install
 
-    $ make install-root
+    $ sudo make install-root
     $ # This for plugins requiring setuid (check_icmp ...)
 
 After compilation and installation, the plugins are installed in the */usr/local/libexec/monitoring-plugins/libexec* directory!
 
 The */usr/local/etc/alignak/arbiter/packs/resource.d/monitoring.cfg* file defines a global macro
 that contains the monitoring plugins installation path. If you do not install as default, edit
-this file to update the path
-::
+this file to update the path::
 
     #-- Monitoring plugins installation directory
     $MONITORING_PLUGINS_DIR$=/usr/local/libexec/monitoring-plugins/libexec
@@ -98,8 +97,7 @@ Many information is available on the `project github repository`_, espacially in
 Alignak configuration
 ~~~~~~~~~~~~~~~~~~~~~
 
-You simply have to tag the concerned hosts with the template you are interested in.
-::
+You simply have to tag the concerned hosts with the template you are interested in.::
 
     define host{
         use                     dns, ftp, http
