@@ -4,6 +4,7 @@
 import os
 import sys
 import re
+import subprocess
 
 try:
     from setuptools import setup, find_packages
@@ -25,27 +26,37 @@ package_name = manifest["__pkg_name__"]
 # This will get:
 # - all the files from the package `etc` subdir
 # - all the files from the package `libexec` subdir
+# - all the files from the package `json` subdir
 # and will define the appropriate target installation directory
 print("\n====================================================")
-print("Searching for data files...")
-data_files = [
-    # ('.', ['LICENSE', 'README.rst', 'requirements.txt', 'version.py'])
-]
+print("Searching for specific data files...")
+data_files = []
 for subdir, dirs, files in os.walk(package_name):
+    if not subdir:
+        continue
+
     target = None
     # Plugins directory
-    if subdir and 'libexec' in subdir:
-        target = os.path.join('var/libexec/alignak',
+    if 'libexec' in subdir:
+        target = os.path.join('share/alignak/libexec',
                               re.sub(r"^(%s\/|%s$)" % (
                                   os.path.join(package_name, 'libexec'),
                                   os.path.join(package_name, 'libexec')),
                                      "", subdir))
     # Configuration directory
-    elif subdir and 'etc' in subdir:
-        target = os.path.join('etc/alignak',
+    elif 'etc' in subdir:
+        target = os.path.join('share/alignak/etc',
                               re.sub(r"^(%s\/|%s$)" % (
                                   os.path.join(package_name, 'etc'),
                                   os.path.join(package_name, 'etc')),
+                                     "", subdir))
+
+    # Backend json files directory
+    elif 'json' in subdir:
+        target = os.path.join('share/alignak/etc/backend-json',
+                              re.sub(r"^(%s\/|%s$)" % (
+                                  os.path.join(package_name, 'json'),
+                                  os.path.join(package_name, 'json')),
                                      "", subdir))
 
     if target is None:
@@ -69,6 +80,7 @@ for (target, origin) in data_files:
         print(" - %s" % (file))
 print("====================================================\n")
 
+
 setup(
     # Package name and version
     name=manifest["__pkg_name__"],
@@ -90,7 +102,6 @@ setup(
 
     # Package data
     packages=find_packages(),
-    # package_data={'': ['LICENSE', 'README.rst', 'requirements.txt', 'version.py']},
 
     # Where to install distributed files
     data_files = data_files,
