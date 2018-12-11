@@ -25,7 +25,7 @@ Installation
 
 The pack configuration files are to be copied to the monitoring objects configuration directory. The most suitable location is the *arbiter/packs/* directory in the main alignak configuration directory.
 
-**Note**: The main Alignak configuration directory is usually */usr/local/etc/alignak* or */etc/alignak* but it may depend upon your system and/or your installation.
+**Note**: The main Alignak configuration directory is usually */usr/local/share/alignak/etc* or */usr/local/etc/alignak* or */etc/alignak* but it may depend upon your system and/or your installation.
 
 The pack plugins (if any ...) are to be copied to the executable libraries directories.
 
